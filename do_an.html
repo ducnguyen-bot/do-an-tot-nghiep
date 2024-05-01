@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>number</title>
+  <link rel="stylesheet" href="form_do_an.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+  crossorigin="anonymous"></script>
+
+</head>
+<body>
+      <!-- class Main chính là div tổng thể chứa tất cả các div con về tiêu đề, nhiệt độ, độ ẩm, gas, đồ thị -->
+      <div class="MAIN">
+          <!-- class TITLE bên trong nó chứa nội dung về tên đề tài và logo -->
+          <div class="TITLE"> 
+            <h2>TRƯỜNG ĐẠI HỌC VINH</h2>
+            <h2>VIỆN KỸ THUẬT VÀ CÔNG NGHỆ</h2>
+            <img class="LOGO" src="img_display/logo dhvinh.jpg">
+            <h1>ĐỒ ÁN TỐT NGHIỆP : GIÁM SÁT MÔI TRƯỜNG</h1>
+          </div>
+          <!-- class LOCAL bên trong nó chứa 3 đối tượng chính đó là nhiệt độ, độ ẩm, gas -->
+          <div class="LOCAL">
+            <!-- class DHT-temp thể hiện về giá trị temp bên trong nó chứa ảnh và id để liên kết với firebase -->
+            <div class="DHT-temp">
+              <!-- logo của temp hiển thị ở đây -->
+              <div>
+                <img class="pic_temp" src="img_display/icon temp.png">
+              </div>
+              <!-- giá trị của temp sẽ hiển thị ở đây -->
+              <div>
+                <p class="txt_temp">Nhiệt Độ:<span id="nhiet do">00</span>°C</p>
+              </div>
+            </div>
+            <!-- class DHT-humid thể hiện về giá trị humid bên trong nó chứa ảnh và id để liên kết với firebase -->
+            <div class="DHT-humid">
+              <!-- logo của humid ở đây -->
+              <div>
+                  <img class="pic_humid" src="img_display/icon humid.png">
+              </div>
+              <!-- giá trị của humid hiển thị ở đây -->
+              <div>
+                  <p class="txt_humid">Độ Ẩm:<span id="do am">00</span>% </p>
+              </div>
+            </div>
+            <!-- class Gas thể hiện về giá trị gas bên trong nó chứa ảnh và id để liên kết với firebase -->
+            <div class="Gas">
+              <!-- logo của gas hiển thị ở đây -->
+              <div>
+                <img class="pic_gas" src="img_display/gas.png">
+              </div>
+              <!-- giá trị của gas hiển thị ở đây -->
+              <div>
+                <p class="txt_gas">Khi gas:<span id="khi gas">00</span></p>
+              </div>
+            </div>
+
+          </div>
+        
+          <div class="container">
+          
+
+              <div class="title">Line chart Temp <button class="btn" onclick="updatedata">UPDATE1 </button> </div>
+              <canvas id="canvas"></canvas>
+              <div class="notice" id="notice-temp"></div>
+
+            
+          </div>
+            
+          <div class="container2">
+
+              <div class="title1">Line chart Humid</div>
+              <canvas id="canvas2"></canvas>
+              <div class="notice" id="notice-humid"></div>
+
+          </div>
+
+
+            <div class="container3">
+              
+              <div class="title2">Line chart Gas</div>
+              <canvas id="canvas3"></canvas>
+              <div class="notice" id="notice-gas"></div>>
+
+            </div>
+
+          </div>
+
+      </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+
+<footer>
+  <script src="click.js"></script>
+</footer>
+
+</body>
+</html>

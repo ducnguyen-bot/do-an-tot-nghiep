@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" 
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" 
+  crossorigin="anonymous"></script>
+</head>
+<style>
+    
+</style>
+
+<body>
+  <div id="main-class">
+      <div class="chart">
+        <canvas id="myChart" width="500px" height="100px"></canvas>
+      </div>
+      <div class="nono" id="nana">
+
+      </div>
+  </div>
+
+  
+  <!-- <script>
+    const labels = [0];
+    const data = {
+      labels: labels,
+      datasets: [{
+        label: 'new data',
+        backgroundColor: 'rgb(255, 99, 132)',
+        borderColor: 'rgb(255, 99, 132)',
+        data: [0],
+      }]
+    };
+  
+    const config = {
+      type: 'line',
+      data: data,
+    
+    };
+
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+    window.setInterval(mycallback,1000);
+
+    function mycallback(){
+      var now = new Date();
+      now = now.getHours() +":" + now.getMinutes() + ":" + now.getSeconds();
+      var value = Math.floor(Math.random()*1000);
+      if(data.datasets[0].data.length >= 20){
+        data.labels.shift();
+        data.datasets[0].data.shift();
+      }
+      data.labels.push(now);
+      data.datasets[0].data.push(value);
+      myChart.update();
+      $('#footer').html(now + " - " + value);
+    }
+  </script> -->
+</body>
+
+<footer>
+  <script src="try1.js"></script>
+</footer>
+
+</html>
